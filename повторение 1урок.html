@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Повторяем перед самостоятельной</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;font-family:"Segoe UI",Arial,sans-serif;background:#eef3f8;color:#18324a}
+body{display:flex;align-items:center;justify-content:center;overflow:hidden}
+#app{width:min(1180px,96vw);height:min(760px,94vh);display:flex;flex-direction:column}
+.slide{flex:1;min-height:0;background:#fff;border:1px solid #d7e2ec;border-radius:22px;box-shadow:0 12px 35px rgba(24,50,74,.12);padding:40px 56px 34px;display:none;overflow:hidden;position:relative}
+.slide.active{display:flex;flex-direction:column}
+.topline{display:flex;justify-content:space-between;align-items:center;color:#52708a;font-size:14px;font-weight:600;margin-bottom:16px}
+h1{font-size:clamp(34px,4vw,54px);line-height:1.08;margin:0 0 22px;letter-spacing:-.03em}
+h2{font-size:clamp(29px,3.2vw,43px);line-height:1.1;margin:0 0 20px;letter-spacing:-.025em}
+.lead{font-size:clamp(21px,2vw,28px);line-height:1.4}
+.cards,.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.card{padding:21px;background:#f3f7fa;border:1px solid #dbe6ee;border-radius:15px;font-size:20px;line-height:1.35}
+.goal,.answer{margin-top:20px;padding:16px 20px;border-radius:13px;font-size:20px;line-height:1.4}
+.goal{border-left:5px solid #4c83a8;background:#f1f7fb}
+.answer{background:#edf6f1;border:1px solid #cfe4d8}
+.definition,.example,.quiz,.step{background:#f4f8fb;border-radius:14px;padding:16px 20px;margin:9px 0;font-size:20px;line-height:1.4}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.formula{margin:18px 0;padding:17px;background:#f5f8fb;border-radius:15px;text-align:center;font-size:clamp(24px,2.4vw,35px);font-weight:600}
+.warning{margin-top:15px;padding:15px 20px;border-radius:13px;background:#fff7e8;border:1px solid #f0d9a7;font-size:19px}
+table{width:100%;border-collapse:collapse;margin-top:5px;font-size:20px}
+th,td{padding:10px 12px;border-bottom:1px solid #dce6ee;text-align:center}
+th{background:#f1f6fa;font-weight:700}
+.sum{text-align:center;margin-top:15px;font-size:21px;font-weight:600}
+.interval{margin-top:10px;padding:15px;border-radius:14px;background:#f5f8fb;text-align:center;font-size:23px}
+.numberline{position:relative;height:65px;margin:18px 30px 2px}
+.line{position:absolute;top:31px;left:5%;right:5%;height:4px;background:#7d98ad}
+.point{position:absolute;top:18px;width:26px;height:26px;border-radius:50%;background:#4c83a8;transform:translateX(-50%)}
+.label{position:absolute;top:48px;transform:translateX(-50%);font-size:17px;font-weight:600}
+.p10,.l10{left:5%}.p125,.l125{left:50%}.p15,.l15{left:95%}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:8px;font-size:20px}
+.check{padding:13px 15px;background:#f5f8fb;border-radius:11px}
+.final-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:4px}
+.final-box{padding:15px;border-radius:14px;background:#f4f8fb;font-size:18px;line-height:1.35}
+.highlight{display:inline-block;padding:3px 9px;border-radius:8px;background:#e8f1f7;font-weight:700}
+.teacher{position:absolute;left:56px;right:56px;bottom:14px;font-size:12px;color:#7890a2}
+.teacher span{font-weight:700}
+.controls{height:56px;display:flex;align-items:center;gap:10px;padding:8px 3px 0}
+button{border:1px solid #cbd9e4;background:#fff;color:#18324a;border-radius:9px;padding:9px 15px;font-size:15px;cursor:pointer}
+button:hover{background:#f1f6fa}button:disabled{opacity:.45;cursor:default}
+.counter{margin-left:auto;font-size:14px;color:#607b91}.progress{height:5px;background:#dce7ef;border-radius:5px;overflow:hidden;width:180px}.bar{height:100%;width:0;background:#4c83a8;transition:width .2s}
+@media(max-width:800px){body{overflow:auto}#app{height:auto;min-height:96vh}.slide{min-height:650px;padding:28px 24px 44px}.cards,.steps,.three,.final-grid,.checklist{grid-template-columns:1fr}table{font-size:16px}.teacher{left:24px;right:24px}}
+</style>
+</head>
+<body>
+<div id="app">
+
+<section class="slide active"><div class="topline"><span>Вероятность и статистика · 8 класс</span><span>1 / 26</span></div>
+<h1>Что повторяем сегодня</h1>
+<div class="lead"><b>Сегодня вспомним три типа задач</b></div>
+<div class="cards">
+<div class="card"><b>1.</b><br>Случайный опыт и событие</div>
+<div class="card"><b>2.</b><br>Среднее объединённого набора</div>
+<div class="card"><b>3.</b><br>Группированные данные</div>
+</div>
+<div class="goal"><b>Работаем по алгоритмам.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Случайный опыт и событие</span><span>2 / 26</span></div>
+<h2>Случайный опыт и событие</h2>
+<div class="definition"><b>Случайный опыт</b> — действие или наблюдение, результат которого заранее неизвестен.</div>
+<div class="definition"><b>Случайное событие</b> — то, что может произойти в результате опыта.</div>
+<div class="answer"><b>Запомни:</b><br>Опыт — <b>что делаем?</b><br>Событие — <b>что может произойти?</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Разбираем пример</span><span>3 / 26</span></div>
+<h2>Разбираем пример</h2>
+<div class="example">На тренировке спортсмен выполняет прыжок в длину. Результат измеряют.</div>
+<div class="quiz"><b>Вопросы:</b><br><br>1. Что является случайным опытом?<br><br>2. Назовите одно случайное событие.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Проверяем</span><span>4 / 26</span></div>
+<h2>Проверяем</h2>
+<div class="definition"><b>Случайный опыт:</b> выполнение и измерение результата прыжка.</div>
+<div class="definition"><b>Случайное событие</b>, например:<br><br>длина прыжка окажется равной 4,2 м.</div>
+<div class="answer"><b>Важно:</b> событие должно быть возможным результатом данного опыта.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Тренируемся</span><span>5 / 26</span></div>
+<h2>Тренируемся</h2>
+<div class="example">В течение дня автоматическая станция несколько раз фиксирует скорость ветра.</div>
+<div class="quiz"><b>1.</b> Что является случайным опытом?<br><br><b>2.</b> Приведите два примера случайных событий.<br><br><b>3.</b> Придумайте ещё одно событие, возможное в этом опыте.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Среднее арифметическое</span><span>6 / 26</span></div>
+<h2>Среднее арифметическое</h2>
+<div class="formula">x̄ = сумма значений ÷ количество значений</div>
+<div class="steps"><div class="step"><b>1.</b><br>Сложить значения.</div><div class="step"><b>2.</b><br>Разделить сумму на количество значений.</div></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Разбираем пример</span><span>7 / 26</span></div>
+<h2>Разбираем пример</h2>
+<div class="example">Время выполнения упражнения:<br><b>6 мин, 8 мин, 7 мин</b></div>
+<div class="formula">x̄ = (6 + 8 + 7) ÷ 3 = 7</div>
+<div class="answer"><b>Ответ: 7 минут.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Объединённое среднее</span><span>8 / 26</span></div>
+<h2>Среднее объединённого набора</h2>
+<div class="answer"><b>Среднее × количество = сумма</b></div>
+<div class="steps"><div class="step"><b>1.</b> Найти сумму первого набора.<br><b>2.</b> Найти сумму второго набора.</div><div class="step"><b>3.</b> Сложить суммы.<br><b>4.</b> Сложить количества.<br><b>5.</b> Разделить общую сумму на общее количество.</div></div>
+<div class="formula">x̄общ = (x̄₁n₁ + x̄₂n₂) ÷ (n₁ + n₂)</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Разбираем пример</span><span>9 / 26</span></div>
+<h2>Разбираем пример</h2>
+<div class="example">В первой группе <b>5 учеников</b>, средний результат — <b>6 баллов</b>.<br>Во второй группе <b>5 учеников</b>, средний результат — <b>8 баллов</b>.</div>
+<div class="formula">5·6 = 30<br>5·8 = 40<br>(30 + 40) ÷ (5 + 5) = 7</div>
+<div class="answer"><b>Ответ: 7 баллов.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Тренируемся</span><span>10 / 26</span></div>
+<h2>Тренируемся</h2>
+<div class="example">В первой группе <b>8 участников</b>, средний результат — <b>6</b>.<br>Во второй группе <b>12 участников</b>, средний результат — <b>9</b>.</div>
+<div class="quiz"><b>Найдите средний результат всех участников.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Проверяем</span><span>11 / 26</span></div>
+<h2>Проверяем</h2>
+<div class="formula">8·6 = 48<br>12·9 = 108<br>(48 + 108) ÷ (8 + 12) = 156 ÷ 20 = 7,8</div>
+<div class="answer"><b>Ответ: 7,8.</b><br><br><b>Помни:</b> если количество элементов в наборах разное, средние нельзя просто сложить и разделить на 2.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Группированные данные</span><span>12 / 26</span></div>
+<h2>Работаем с таблицей</h2>
+<div class="example">Рассмотрим результаты измерения времени выполнения задания.</div>
+<table><tr><th>Время, мин</th><th>10–15</th><th>15–20</th><th>20–25</th><th>25–30</th><th>30–35</th></tr>
+<tr><th>Частота</th><td>0,12</td><td>0,24</td><td>0,30</td><td>0,22</td><td>0,12</td></tr></table>
+<div class="sum">0,12 + 0,24 + 0,30 + 0,22 + 0,12 = 1</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Интервал</span><span>13 / 26</span></div>
+<h2>Длина интервала</h2>
+<div class="formula">длина = конец − начало</div>
+<div class="example">Для интервала <b>15–20</b>:</div>
+<div class="formula">20 − 15 = 5</div>
+<div class="answer"><b>Ответ: 5 минут.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Интервал</span><span>14 / 26</span></div>
+<h2>Середина интервала</h2>
+<div class="formula">середина = (начало + конец) ÷ 2</div>
+<div class="example">Для интервала <b>15–20</b>:</div>
+<div class="formula">(15 + 20) ÷ 2 = 17,5</div>
+<div class="answer"><b>Ответ: 17,5 минут.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Тренируемся</span><span>15 / 26</span></div>
+<h2>Тренируемся</h2>
+<div class="quiz">По таблице найдите:<br><br><b>1.</b> длину интервала 25–30;<br><br><b>2.</b> середину интервала 25–30;<br><br><b>3.</b> середины всех пяти интервалов.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Проверяем</span><span>16 / 26</span></div>
+<h2>Проверяем</h2>
+<div class="steps"><div class="step"><b>Длина:</b><br>30 − 25 = 5</div><div class="step"><b>Середина:</b><br>(25 + 30) ÷ 2 = 27,5</div></div>
+<div class="answer"><b>Середины всех интервалов:</b><br>12,5; 17,5; 22,5; 27,5; 32,5</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Среднее по таблице</span><span>17 / 26</span></div>
+<h2>Среднее по сгруппированным данным</h2>
+<div class="steps"><div class="step"><b>1.</b> Найти середины интервалов.</div><div class="step"><b>2.</b> Каждую середину умножить на соответствующую частоту.<br><br><b>3.</b> Сложить полученные произведения.</div></div>
+<div class="formula" style="font-size:23px">12,5·0,12 + 17,5·0,24 + 22,5·0,30 + 27,5·0,22 + 32,5·0,12</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Тренируемся</span><span>18 / 26</span></div>
+<h2>Тренируемся</h2>
+<table><tr><th>Время, мин</th><th>10–15</th><th>15–20</th><th>20–25</th><th>25–30</th><th>30–35</th></tr>
+<tr><th>Частота</th><td>0,12</td><td>0,24</td><td>0,30</td><td>0,22</td><td>0,12</td></tr></table>
+<div class="quiz"><b>1.</b> Запишите выражение для среднего значения.<br><br><b>2.</b> Вычислите его.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Медиана</span><span>19 / 26</span></div>
+<h2>Медиана</h2>
+<div class="quiz"><b>Чтобы определить интервал, содержащий медиану:</b><br><br>складываем частоты слева направо.</div>
+<div class="formula">0,12 + 0,24 = 0,36 &lt; 0,5<br><br>0,36 + 0,30 = 0,66 &gt; 0,5</div>
+<div class="answer"><b>Значит, медиана находится в интервале 20–25.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Тренируемся</span><span>20 / 26</span></div>
+<h2>Тренируемся</h2>
+<div class="quiz">По той же таблице:<br><br><b>1.</b> Найдите сумму частот первых двух интервалов.<br><br><b>2.</b> Найдите сумму частот первых трёх интервалов.<br><br><b>3.</b> Определите интервал, содержащий медиану.<br><br><b>4.</b> Объясните свой ответ.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Проверяем</span><span>21 / 26</span></div>
+<h2>Проверяем</h2>
+<div class="formula">0,12 + 0,24 = 0,36<br><br>0,36 + 0,30 = 0,66</div>
+<div class="answer">0,36 &lt; 0,5 &lt; 0,66<br><br><b>Следовательно, медиана находится в интервале 20–25.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Итоговая практика</span><span>22 / 26</span></div>
+<h2>Проверяем всё вместе</h2>
+<div class="example"><b>Задание 1</b></div>
+<div class="quiz">На метеостанции измеряют скорость ветра.<br><br><b>а)</b> Что является случайным опытом?<br><br><b>б)</b> Приведите два случайных события.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Итоговая практика</span><span>23 / 26</span></div>
+<h2>Проверяем всё вместе</h2>
+<div class="example"><b>Задание 2</b></div>
+<div class="quiz">В первой группе <b>6 человек</b>, средний результат — <b>12</b>.<br><br>Во второй группе <b>9 человек</b>, средний результат — <b>15</b>.<br><br><b>Найдите средний результат всех участников.</b></div>
+</section>
+
+<section class="slide"><div class="topline"><span>Итоговая практика</span><span>24 / 26</span></div>
+<h2>Проверяем всё вместе</h2>
+<table><tr><th>Результат, усл. ед.</th><th>20–30</th><th>30–40</th><th>40–50</th><th>50–60</th></tr>
+<tr><th>Частота</th><td>0,10</td><td>0,20</td><td>0,50</td><td>0,20</td></tr></table>
+<div class="quiz"><b>Найдите:</b><br><br>1. длину каждого интервала;<br>2. середины всех интервалов;<br>3. среднее значение по таблице;<br>4. интервал, содержащий медиану.</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Памятка</span><span>25 / 26</span></div>
+<h2>Алгоритмы перед самостоятельной</h2>
+<div class="final-grid">
+<div class="final-box"><b>Случайный опыт</b><br>Что делаем или наблюдаем?</div>
+<div class="final-box"><b>Случайное событие</b><br>Что может произойти?</div>
+<div class="final-box"><b>Объединённое среднее</b><br>(x̄₁n₁ + x̄₂n₂) ÷ (n₁ + n₂)</div>
+<div class="final-box"><b>Интервал</b><br>длина = b − a<br>середина = (a + b) ÷ 2</div>
+<div class="final-box"><b>Среднее по таблице</b><br>середина × частота → сложить</div>
+<div class="final-box"><b>Медиана</b><br>Складываем частоты слева направо → ищем, где накопленная частота переходит через 0,5.</div>
+</div>
+</section>
+
+<section class="slide"><div class="topline"><span>Самопроверка</span><span>26 / 26</span></div>
+<h2>Готовы к самостоятельной?</h2>
+<div class="checklist">
+<div class="check">☐ определить случайный опыт</div>
+<div class="check">☐ назвать случайное событие</div>
+<div class="check">☐ найти среднее объединённого набора</div>
+<div class="check">☐ найти длину интервала</div>
+<div class="check">☐ найти середину интервала</div>
+<div class="check">☐ найти среднее по сгруппированным данным</div>
+<div class="check">☐ определить интервал, содержащий медиану</div>
+</div>
+<div class="answer"><b>Готовы?</b> Проверьте, все ли пункты можете выполнить самостоятельно.</div>
+</section>
+
+<div class="controls">
+<button id="prev">← Назад</button><button id="next">Далее →</button>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div class="counter" id="counter">Слайд 1 из 26</div>
+</div>
+</div>
+<script>
+const slides=[...document.querySelectorAll(".slide")];
+let current=0;
+function showSlide(i){
+ current=Math.max(0,Math.min(slides.length-1,i));
+ slides.forEach((s,n)=>s.classList.toggle("active",n===current));
+ prev.disabled=current===0;
+ next.disabled=current===slides.length-1;
+ counter.textContent=`Слайд ${current+1} из ${slides.length}`;
+ bar.style.width=`${(current+1)/slides.length*100}%`;
+}
+function change(d){showSlide(current+d)}
+prev.onclick=()=>change(-1); next.onclick=()=>change(1);
+document.addEventListener("keydown",e=>{
+ if(["ArrowRight","PageDown"," "].includes(e.key)){e.preventDefault();change(1)}
+ if(["ArrowLeft","PageUp"].includes(e.key)){e.preventDefault();change(-1)}
+ if(e.key==="Home"){e.preventDefault();showSlide(0)}
+ if(e.key==="End"){e.preventDefault();showSlide(slides.length-1)}
+});
+showSlide(0);
+</script>
+</body>
+</html>
